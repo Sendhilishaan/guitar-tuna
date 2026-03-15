@@ -21,7 +21,8 @@ public:
     ~AudioCapture();
     
     // initialize portaudio and open audio stream
-    bool initialize();
+    // deviceIndex: PortAudio device index, or -1 for default
+    bool initialize(int deviceIndex = -1);
     
     // start / stop capturing
     bool start();

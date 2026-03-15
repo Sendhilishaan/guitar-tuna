@@ -20,6 +20,9 @@ int main() {
                   << std::endl;
     }
     
-    Pa_Terminate();
+    PaError err2 = Pa_Terminate();
+    if ( err2 != paNoError) {
+        std::cout << Pa_GetErrorText(err2) << std::endl;
+    }
     return 0;
 }
